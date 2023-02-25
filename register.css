@@ -10,6 +10,7 @@ body{
     justify-content: center;
     height: 100vh;
     text-align: center;
+    color: rgb(48, 119, 212);
     
   }
 
@@ -57,7 +58,7 @@ body{
   }
 
  
-  .form-container input[type=submit] {
+  .form-container input[type=button] {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
