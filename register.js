@@ -7,9 +7,17 @@ function validateForm() {
     const password = form.elements['password'].value;
     const confirmPassword = form.elements['confirm-password'].value;
 
-    
+        
+  const formData = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    password: password,
+    confirmPassword: confirmPassword
+  };
+  
+  console.log(formData);
 
-    // validate the form fields
     if (firstName.trim() === '') {
         alert('Please enter your first name.');
         return;
