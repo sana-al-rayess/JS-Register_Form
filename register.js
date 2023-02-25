@@ -45,5 +45,12 @@ function validateForm() {
         return;
     }
 
+    var maleRadio = document.getElementById("male-radio");
+  var femaleRadio = document.getElementById("female-radio");
+  if (!maleRadio.checked && !femaleRadio.checked) {
+    alert("Please select a gender.");
+    return;
+  }
+
  
 }
