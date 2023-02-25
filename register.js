@@ -19,6 +19,13 @@ function validateForm() {
         alert('Please enter your last name.');
         return;
     }
-  
     
+
+    
+    if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return;
+    }
+
+ 
 }
