@@ -20,7 +20,11 @@ function validateForm() {
         return;
     }
     
-
+    const passwordRegex = /^(?=.*[!@#$%^&*])(?=.*[A-Z]).{8,}$/;
+    if (!passwordRegex.test(password)) {
+        alert('Please enter your password correctly: 8 characters minimum, one special character minimum, at least one upper case letter');
+        return;
+    }
     
     if (password !== confirmPassword) {
         alert('Passwords do not match.');
