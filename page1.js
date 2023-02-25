@@ -68,3 +68,25 @@ function checkPalindrome() {
 
     return palindrome(str.slice(1, str.length - 1));
   }
+
+  function checkPrimeAge() {
+    const inputYear = document.getElementById("input-year").value;
+    const age = new Date().getFullYear() - inputYear;
+    const isPrimeAge = isPrime(age);
+    const message = isPrimeAge ? "Your age is a prime number!" : "Your age is not a prime number.";
+    document.getElementById("prime-age-result").innerHTML = message;
+  }
+
+  function isPrime(num) {
+    if (num <= 1) {
+      return false;
+    }
+
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+        return false;
+      }
+    }
+
+    return true;
+  }
