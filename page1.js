@@ -50,3 +50,21 @@ function mergeSort(array) {
 
 }
 
+function checkPalindrome() {
+    const inputString = document.getElementById("input-string").value;
+    const isPalindrome = palindrome(inputString);
+    const message = isPalindrome ? "The string is a palindrome!" : "The string is not a palindrome.";
+    document.getElementById("palindrome-result").innerHTML = message;
+  }
+
+  function palindrome(str) {
+    if (str.length <= 1) {
+      return true;
+    }
+
+    if (str[0] !== str[str.length - 1]) {
+      return false;
+    }
+
+    return palindrome(str.slice(1, str.length - 1));
+  }
