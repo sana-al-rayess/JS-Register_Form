@@ -90,3 +90,17 @@ function checkPalindrome() {
 
     return true;
   }
+
+  function reverseAndConvert() {
+    let input = document.getElementById("inputString").value;
+    let reversedInput = input.split("").reverse().join("");
+    let consonantRegex = /^[^aeiou]+/;
+    let consonants = input.match(consonantRegex);
+    let result;
+    if (consonants) {
+      result = input.substring(consonants[0].length) + consonants[0] + "ay";
+    } else {
+      result = input + "ay";
+    }
+    document.getElementById("result").innerHTML = "Reversed: " + reversedInput + "<br>Converted: " + result;
+  }
