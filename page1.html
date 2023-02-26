@@ -8,42 +8,50 @@
 </head>
 
 <body>
-    
+
     <div class="input-container">
-        <h1>Merge Sort</h1>
+        <h1 class="my-heading">Merge Sort</h1>
         <button onclick="sortNumbers()">Click here to start</button>
         <label>The Numbers You Entered:</label>
         <label for="numbers-output" id="numbers-output"></label>
-    </div>
-    <div class="output-container">
-        <label for="numbers-output">Sorted Numbers:</label>
+
+        <label for="numbers-output"></label>
         <label class="result" id="sorted-output"></label>
-        
+
     </div>
     <div class="input-container">
-        <h1>Palindrome</h1>
+        <h1 class="my-heading">Palindrome</h1>
         <label>Enter a string:</label>
         <input type="text" id="input-string">
         <button onclick="checkPalindrome()">Check Palindrome</button>
         <p class="result" id="palindrome-result"></p>
     </div>
     <div class="age-container">
-        <h1>Prime Age</h1>
+        <h1 class="my-heading">Prime Age</h1>
         <label>Enter your year of birth:</label>
         <input type="text" id="input-year">
         <button onclick="checkPrimeAge()">Check Prime Age</button>
         <p class="result" id="prime-age-result"></p>
     </div>
+    
     <div class="input-container">
-        <h1>Reverse and Convert String</h1>
-	<label for="inputString">Enter a string:</label>
-	<input type="text" id="inputString">
-	<br>
-	<button onclick="reverseAndConvert()">Reverse and Convert</button>
-	<p id="result" class="result"></p>
-
+        <img src="./images/reverse.png" alt="reverse icon">
+        <h1 class="my-heading">Reverse and Convert String</h1>
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString">
+        <br>
+        <button onclick="reverseAndConvert()">Reverse and Convert</button>
+        <p id="reverse-result" class="result"></p>
     </div>
-
+    <div class="input-container">
+        <img src="./images/red-location-icon-1.png" alt="location icon">
+        <h1 class="my-heading">My Current Location:</h1>
+        <p class="result" id="location-result"></p>
+        <br>
+        <button onclick="showLocation()">Find Location</button>
+        <p id="location" class="result"></p>
+    </div>
+    
 
     <script src="page1.js"></script>
 
