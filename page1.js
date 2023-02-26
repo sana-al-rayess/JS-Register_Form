@@ -189,17 +189,17 @@ function checkPalindrome() {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
  // Flag variable to keep track of whether alert has been triggered or not
- let alertTriggered = false;
+      let alertTriggered = false;
 
- window.addEventListener("scroll", function () {
-   // Get the coordinates of the section we want to trigger the alert for
-   const section2Coords = document.getElementById("section2").getBoundingClientRect();
+      window.addEventListener("scroll", function () {
+        // Get the coordinates of the section we want to trigger the alert for
+        const section2Coords = document.getElementById("section2").getBoundingClientRect();
 
-   // Check if the top of the section is within the visible viewport and the alert has not been triggered yet
-   if (section2Coords.top <= window.innerHeight * 0.5 && section2Coords.bottom >= window.innerHeight * 0.5 && !alertTriggered) {
-     alert("You have scrolled to Section 2!");
-     alertTriggered = true;
-   }
+        // Check if the top of the section is within the visible viewport and the alert has not been triggered yet
+        if (section2Coords.top <= window.innerHeight * 0.5 && section2Coords.bottom >= window.innerHeight * 0.5 && !alertTriggered) {
+          alert("You have scrolled to Section 2!");
+          alertTriggered = true;
+        }
     })
         
     
