@@ -1,3 +1,5 @@
+
+
 function sortNumbers() {
     
     const input = prompt("Please enter 10 numbers separated by commas:");
@@ -46,7 +48,7 @@ function mergeSort(array) {
   
   const sortedNumbers = mergeSort(numbers);
   const sortedOutput = document.getElementById("sorted-output");
-  sortedOutput.textContent = sortedNumbers.join(", ");
+  sortedOutput.textContent ="Sorted Numbers:"+ sortedNumbers.join(", ");
 
 }
 
@@ -104,3 +106,21 @@ function checkPalindrome() {
     }
     document.getElementById("result").innerHTML = "Reversed: " + reversedInput + "<br>Converted: " + result;
   }
+  function showLocation() {
+    const locationParagraph = document.getElementById("location");
+    
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        
+        locationParagraph.textContent = `Your current location is: (${latitude}, ${longitude})`;
+      }, (error) => {
+        locationParagraph.textContent = `Unable to retrieve location: ${error.message}`;
+      });
+    } else {
+      locationParagraph.textContent = "Geolocation is not supported by your browser.";
+    }
+  }
+
+ 
