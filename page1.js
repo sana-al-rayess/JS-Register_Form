@@ -1,3 +1,33 @@
+const headings = document.getElementsByTagName("h1");
+
+function animateHeading(heading) {
+  const text = heading.innerText;
+  heading.innerText = "";
+
+  for (let i = 0; i < text.length; i++) {
+    const letter = document.createElement("span");
+    letter.innerText = text.charAt(i);
+    letter.style.opacity = 0;
+    heading.appendChild(letter);
+
+    setTimeout(() => {
+      letter.style.opacity = 1;
+    }, 100 * i);
+  }
+}
+
+// Call the animateHeading function for each h1 element
+let index = 0;
+animateHeading(headings[index]);
+
+// Set the interval to repeat the animation every 2 seconds
+setInterval(() => {
+  index++;
+  if (index >= headings.length) {
+    index = 0;
+  }
+  animateHeading(headings[index]);
+}, 500);
 
 
 function sortNumbers() {
