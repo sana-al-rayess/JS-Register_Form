@@ -153,4 +153,34 @@ function checkPalindrome() {
     }
   }
 
- 
+ async function getIpSum() {
+        try {
+          const response = await fetch('https://api.ipify.org?format=json');
+          const data = await response.json();
+          const ip = data.ip.replace(/\./g, ''); // remove dots
+          let sum = 0;
+          for (let i = 0; i < ip.length; i++) {
+            const digit = parseInt(ip[i]);
+            if (!isNaN(digit) && digit % 2 === 0) { // check if digit is even
+              sum += digit;
+            }
+          }
+          return { ip, sum };
+        } catch (error) {
+          console.error(error);
+        }
+        
+      }
+      
+      const getIpSumButton = document.getElementById('get-ip-sum-button');
+      getIpSumButton.addEventListener('click', () => {
+        getIpSum().then(({ ip, sum }) => {
+          const ipElement = document.getElementById('ip');
+          ipElement.textContent = "Your IP address is:"+ip;
+
+          const sumElement = document.getElementById('sum');
+          sumElement.textContent ="The sum of the even digits in your IP address is: " +sum;
+        });
+      });
+
+    
