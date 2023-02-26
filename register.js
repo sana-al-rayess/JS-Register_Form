@@ -50,6 +50,6 @@ function validateForm() {
     return;
   }
 
-  window.location.href = './page1.html';
+  window.location.href = './main.html';
 };
 

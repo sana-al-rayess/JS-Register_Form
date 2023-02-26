@@ -1,8 +1,18 @@
 body{
-    background-image: url(./blue.jpg);
+    background-image: url(./images/blyeyello.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
+h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  font-weight: 700;
+  background-image: linear-gradient(to bottom, transparent 0%, darkblue 50%, goldenrod);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -10,7 +20,7 @@ body{
     justify-content: center;
     height: 100vh;
     text-align: center;
-    color: rgb(48, 119, 212);
+    color: darkblue;
     
   }
 
@@ -23,7 +33,7 @@ body{
     background-color: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
-    background-color: rgb(48, 119, 212);
+    background-color: darkblue;
     opacity: 80%;
     color: white;
     
@@ -46,6 +56,7 @@ body{
     font-weight: bold;
     text-align: right;
     margin-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .form-input {
@@ -59,7 +70,7 @@ body{
 
  
   .form-container input[type=button] {
-    background-color: #4CAF50;
+    background-color: darkblue;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -67,12 +78,12 @@ body{
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 5px solid goldenrod;
   }
-  .form-container input[type=submit]:hover {
-    background-color: #3e8e41;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  .form-container input[type=button]:hover {
+    background-color: goldenrod;
   }
   
 
