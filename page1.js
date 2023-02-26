@@ -136,6 +136,7 @@ function checkPalindrome() {
     }
     document.getElementById("result").innerHTML = "Reversed: " + reversedInput + "<br>Converted: " + result;
   }
+  
   function showLocation() {
     const locationParagraph = document.getElementById("location");
     
