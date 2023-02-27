@@ -9,5 +9,7 @@
                                         <li><b>Javascript</b></li>
                                         </ul></p> 
 <p><b>Date: 27/2/2023</b></p>
-<p><b> References:<b> 
+<p><b> Note:<b> 
+<p>Most functions were taken from https://chat.openai.com/ or https://www.w3schools.com/js/</p>
+<p>I tried to understand each line of code and modified it accoding to my project</p>
 </html>
